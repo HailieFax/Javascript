@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+        var minAlder = 34;
+    
+    </script>
+<meta charset="utf-8">
+<title>Javascript øvelser</title>
+</head>
+
+<body>
+    <h1 id="overskrift">Javascript øvelser</h1>
+
+    <p>I dette eksempel anvendes formular input i beregningen
+    </p>
+
+    <p id="alderstekst"> 
+        Her står en tekst som forsvinder når knappen bliver trykket
+
+    </p>
+    <form>Din navn: <input type="text" name="navnefelt" id="navnefelt">
+    <br>
+    <form>Din alder: <input type="text" name="aldersfelt" id="aldersfelt">
+    <button type="button" onClick="minFunktion()">Klik her</button></form>
+
+</body>
+
+</html>
+
+<script>
+    function minFunktion(alder) {
+        var alder, fodselsAar, navn; 
+
+        navn= document.getElementById("navnefelt").value;
+        alder= document.getElementById("aldersfelt").value;
+        fodselsAar = 2020 - alder;
+        document.getElementById("alderstekst").innerHTML = " Hej " + navn + " du er sandsynligvis født i " + (fodselsAar-1) + " eller " + fodselsAar;
+    }
+
+</script>

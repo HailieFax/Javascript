@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+        var minAlder = 34;
+    
+    </script>
+<meta charset="utf-8">
+<title>Javascript øvelser</title>
+</head>
+
+<body>
+    <h1 id="overskrift">Javascript øvelser</h1>
+
+    <p>I dette eksempel arbejder ændrer jeg dokumentobjektmodellen i stedet for alert der ikke er brugervenligt
+    </p>
+
+    <p id="alderstekst"> 
+        Her står en tekst som skal udskiftes 
+
+    </p>
+
+    <button type="button" onClick="minFunktion(minAlder)">Klik her</button>
+
+</body>
+
+</html>
+
+<script>
+    function minFunktion(alder) {
+        var fodselsAar; 
+        fodselsAar = 2020 - alder;
+        document.getElementById("alderstekst").innerHTML = "Du er sandsynligvis født i " + fodselsAar;
+    }
+
+</script>
