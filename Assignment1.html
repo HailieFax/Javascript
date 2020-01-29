@@ -13,15 +13,21 @@
         Trænings opgave 1 - Løbehastighedsberegner
     </p>
 
-    <p id="tekst"> 
+    <p id="hastighed"> 
         Her står en tekst som forsvinder når knappen bliver trykket
 
     </p>
     <form>Navn: <input type="text" name="navnefelt" id="navnefelt">
     <br>
-    <form>Rute: <input type="text" name="rutefelt" id="rutefelt">
+    <form>Meter: <input type="text" name="meter" id="meterfelt">
     <br>
-    <form>Tid: <input type="text" name="tidsfelt" id="tidsfelt">
+    <form>Timer: <input type="text" name="timefelt" id="timefelt">
+    <br>
+    <form>Minutter <input text="text" name="minutfelt" id="minutfelt">
+    <br>
+    <form>Sekunder <input text="text" name="sekundfelt" id="sekundfelt">
+
+    
 
     <button type="button" onClick="minFunktion()">Klik her</button></form>
 
@@ -31,13 +37,24 @@
 
 <script>
     function minFunktion() {
-
-        var navn, rute, tid; 
+       
+        var total, navn, km, time, timer, min, minutter, sekunder, meter; 
         navn= document.getElementById("navnefelt").value;
-        rute= document.getElementById("rutefelt").value;
-        tid= document.getElementById("tidsfelt").value;
-        hastighed = rutefelt / tidsfelt;
-        document.getElementById("tekst").innerHTML = " Hej " + navn + " din gennemsnits km/timen er " + (rute) / (tid);
+        
+        meter= document.getElementById("meterfelt").value;
+        timer= document.getElementById("timefelt").value;
+        minutter= document.getElementById("minutfelt").value;
+        sekunder= document.getElementById("sekundfelt").value;
+        
+        km= meter/1000;
+        min = (sekunder/60) + minutter;
+        time= (min/60) + timer;
+
+        total= km/time / 10;
+       
+        document.getElementById("hastighed").innerHTML = " Hej " + navn + " din gennemsnits km/timen er " + total;
     }
+
+  
 
 </script>

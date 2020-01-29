@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Javascript øvelser</title>
+</head>
+
+<body>
+    <h1 id="overskrift">Javascript øvelser</h1>
+
+    <p>
+        Trænings opgave 3 - Ohms lov
+    </p>
+
+    <p id="Spænding"> 
+        Her står en tekst som forsvinder når knappen bliver trykket
+
+    </p>
+    Ohm: <input type="ohm" name="ohmfelt" id="ohmfelt">
+    <br>
+    Strøm: <input type="text" name="stromfelt" id="stromfelt">
+       
+    <button type="button" onClick="aFunktion()">Spænding i volt</button></form>
+
+
+   <p id="Modstand"> 
+        Her står en tekst som forsvinder når knappen bliver trykket
+
+    </p>
+    Spænding: <input type="text" name="spandingfelt" id="spandingfelt">
+    <br>
+    Strøm: <input type="text" name="stromfelt1" id="stromfelt1">
+       
+    <button type="button" onClick="bFunktion()">Modstand</button></form>
+
+    <p id="Strøm"> 
+        Her står en tekst som forsvinder når knappen bliver trykket
+
+    </p>
+
+    Spænding: <input type="text" name="spandingfelt2" id="spandingfelt2">
+    <br>
+    Modstand: <input type="text" name="modstand" id="modstand">
+       
+    <button type="button" onClick="cFunktion()">Strøm</button></form>  
+
+</body>
+
+</html>
+
+<script>
+
+    function aFunktion() {
+       
+        var ohm, strøm; 
+        
+        ohm= document.getElementById("ohmfelt").value;
+        strøm= document.getElementById("stromfelt").value;
+       
+   
+        document.getElementById("Spænding").innerHTML = " Spænding er " + (ohm) * (strøm) + " volt";
+    
+    }
+
+    function bFunktion () {
+        
+       var spaending, strøm1; 
+        
+        spaending= document.getElementById("spandingfelt").value;
+        strøm1= document.getElementById("stromfelt1").value;
+       
+   
+        document.getElementById("Modstand").innerHTML = " Modstanden er " + (strøm1) / (spaending);
+    }
+
+
+    
+    function cFunktion () {
+        
+        var spaending2, modstand; 
+         
+         spaending2= document.getElementById("spandingfelt2").value;
+         modstand= document.getElementById("modstand").value;
+        
+    
+         document.getElementById("Strøm").innerHTML = " Strøm er " + (modstand) / (spaending2);
+     }
+ 
+  
+
+</script>

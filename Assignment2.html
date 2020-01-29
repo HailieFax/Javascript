@@ -19,15 +19,16 @@
     </p>
     <form>Navn: <input type="text" name="navnefelt" id="navnefelt">
     <br>
-    <form>sted: <input type="text" name="stedfelt" id="stedfelt">
+    <form>Sted: <input type="text" name="stedfelt" id="stedfelt">
     <br>
-    <form>kæledyr: <input type="text" name="dyrfelt" id="dyrfelt">
+    <form>Kæledyr: <input type="text" name="dyrfelt" id="dyrfelt">
     <br>
     <form>Navn på kæledyr: <input type="text" name="dyrnavnfelt" id="dyrnavnfelt">
     <br>
-    <form>Ynglings beskæftigelse: <input type="text" name="aktivitetfelt" id="aktivitetfelt">
+    <form>Yndlings beskæftigelse: <input type="text" name="aktivitetfelt" id="aktivitetfelt">
     <br>
-    <form>Ynlings farve: <input type="text" name="farvefelt" id="farvefelt">
+    <form>Her kan du vælge yndlings farve: <input type="color" name="farvefelt" id="farvefelt">
+
 
     <button type="button" onClick="minFunktion()">Klik her</button></form>
 
@@ -44,9 +45,14 @@
         kæledyr= document.getElementById("dyrfelt").value;
         kæledyrsnavn= document.getElementById("dyrnavnfelt").value;
         beskæftigelse= document.getElementById("aktivitetfelt").value;
-        farve= document.getElementById("farvefelt").value;
+        farve= document.getElementById("farvefelt").value
+
+        
       
-        document.getElementById("tekst").innerHTML = " Hej " + navn + " Her din historie om " + (kæledyrsnavn) + " som elskede at være " + (sted)  + ". " + (kæledyrsnavn) + " som var en " + (kæledyr) + " foretrak at "  +   (beskæftigelse) + ". "  +  (kæledyrsnavn) + " havde en ynglingsfarve som var " + (farve);
+        document.getElementById("tekst").innerHTML = " Hej " + navn + " Her din historie om. " + (kæledyrsnavn) + " som elskede at være " + (sted)  + ". " + (kæledyrsnavn) + " som var en " + (kæledyr) + " foretrak at "  +   (beskæftigelse) + ". " ;
+
+        document.body.style.backgroundColor= farve;
     }
+
 
 </script>

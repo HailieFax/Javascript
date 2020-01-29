@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Javascript øvelser</title>
+</head>
+
+<body>
+    <h1 id="overskrift">Javascript øvelser</h1>
+
+    <p>
+        Trænings opgave 4 - omregner
+    </p>
+
+    <p id="Udregning"> 
+        Her står en tekst som forsvinder når knappen bliver trykket
+
+    </p>
+    Knob: <input type="text" name="knobfelt" id="knobfelt">
+    <br>
+    meter: <input type="text" name="meterfelt" id="meterfelt">
+    <br>
+    km/t: <input type="text" name="kmfelt" id="meterfelt">
+     <br>  
+    <button type="button" onClick="minFunktion()">Omregning</button></form>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    function minFunktion() {
+       
+        var knob, meter, km; 
+        
+        knob= document.getElementById("knobfelt").value;
+        meter= document.getElementById("meterfelt").value;
+        km= document.getElementById("kmfelt").value;
+
+        1 knob = 1852 KM/T / 3.6 M/S;
+        1 KMT = 3.6 M/S / 1852 Knob;
+        1 MS = 0.277 KM/T / 1852 Knob;
+
+   
+
+
+        document.getElementById("Spænding").innerHTML = " Spænding er " + (ohm) * (strøm) + " volt";
+    
+    }
+
+
+</script>
