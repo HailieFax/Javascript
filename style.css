@@ -1,0 +1,80 @@
+
+
+.red-eyes .eye-color {
+
+    fill: red;
+
+}
+
+.happy .mouth {
+    transform: rotate(180deg) scale(0.8);
+    transform-origin: 400px 600px;
+
+}
+
+@keyframes moveEyes {
+    0% {
+        transform: translate(10px, -10px);
+
+    }
+
+    50% {
+
+        transform: translate(5px, 20px);
+    }
+
+   
+}
+
+
+.move-around .innereye {
+    animation: moveEyes 10s infinite;
+}
+
+@keyframes whiskers {
+    20% {
+
+        transform: rotate(10deg);
+    }
+}
+
+.move-around .whiskers {
+    animation: whiskers 3s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes whiskers1 {
+    0% {
+
+        transform: rotate(-10deg);
+    }
+}
+
+.move-around .whiskers1 {
+    animation: whiskers1 3s infinite;
+    transform-origin: 350px 325px;
+}
+
+@keyframes move {
+
+
+
+    40% {
+        transform: rotateY(30deg) rotateX(10deg);
+    }
+
+
+    60% {
+
+        transform: rotateY(-20deg) rotateX(-30deg);
+    }
+
+    85% {
+
+        transform: rotateY (20deg)
+    }
+}
+
+.move-around {
+    animation: move 8s infinite;
+}
