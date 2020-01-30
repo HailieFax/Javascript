@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript øvelser</title>
+</head>
+
+<body>
+    <h1 id="overskrift">Javascript øvelser</h1>
+
+    <p>Øvelse i Array med frugt</p>
+
+    <p id="placeholder">Tilfædig tekst om løkker - Frugt listen kommer her    </p>
+
+</body>
+
+</html>
+
+<script>
+    var tekst ="";
+    var frugtArray= ["Æble", "Pære", "Banan", "Appelsin", "Kiwi", "Melon", "Ananas", "Sharonfrugt", "Blodappelsin", "Drue", "Mango"];
+
+    var lagerArray= [4, 6 ,7, 8, 3, 3, 2, 0, 5, 3, 4];
+    frugtArray[7]="Kaki";
+    lagerArray[8]--;
+    for (i = 0; i < frugtArray.length; i++) {
+        tekst += frugtArray[i] + ": " + lagerArray[i] + "<br>";
+
+        
+    }
+
+    document.getElementById("placeholder").innerHTML = tekst; 
+
+</script>

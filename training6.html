@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript øvelser</title>
+</head>
+
+<body>
+    <h1 id="overskrift">Javascript øvelser</h1>
+
+    <p>Øvelse i for-løkker</p>
+
+    <p id="placeholder"> 
+       Tilfædig tekst om løkker - Gad vide om man kan hænge sig I skidtet
+    </p>
+
+</body>
+
+</html>
+
+<script>
+    var tekst ="";
+    for (i = 0; i < 10; i++) {
+        tekst += "Hej";
+    }
+
+    document.getElementById("placeholder").innerHTML = tekst; 
+
+</script>
